@@ -46,7 +46,7 @@
 
 .aboutText p {
     animation: slideInFromLeft 0.8s ease forwards;
-    opacity: 0;
+    opacity: 1;
 }
 
 .aboutText p:nth-child(1) {
