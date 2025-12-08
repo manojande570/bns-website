@@ -114,6 +114,48 @@
     font-weight: bold;
 }
 
+.expertiseButtonContainer {
+    text-align: center;
+    margin-top: 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.expertiseLink {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.expertiseButton {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.expertiseButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+}
+
+.expertiseButton .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.expertiseButton:hover .arrow {
+    transform: translateX(5px);
+}
+
 @media (max-width: 768px) {
     .solutionsGrid {
         grid-template-columns: 1fr;

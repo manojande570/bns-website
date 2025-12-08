@@ -1,3 +1,6 @@
+'use client';
+
+import Link from 'next/link';
 import ScrollReveal from './ScrollReveal';
 import styles from '@/styles/About.module.css';
 
@@ -27,6 +30,13 @@ export default function About() {
                             Our wide range of customized models, scalability, and immense talent pool enable us
                             to reliably serve customer needs.
                         </p>
+                        <br />
+                        <Link href="/about" className={styles.readMoreLink}>
+                            <button className={styles.readMoreButton}>
+                                Read More
+                                <span className={styles.arrow}>→</span>
+                            </button>
+                        </Link>
                     </div>
                     <div className={styles.aboutImage}>
                         <svg

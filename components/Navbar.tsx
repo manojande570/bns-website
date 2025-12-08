@@ -31,27 +31,37 @@ export default function Navbar() {
             <div className={styles.logo}>BNS International</div>
             <ul className={styles.navLinks}>
                 <li>
-                    <a href="#home" onClick={(e) => handleClick(e, '#home')}>
+                    <a href="/#home">
                         Home
                     </a>
                 </li>
                 <li>
-                    <a href="#about" onClick={(e) => handleClick(e, '#about')}>
+                    <a href="/about">
                         About
                     </a>
                 </li>
                 <li>
-                    <a href="#services" onClick={(e) => handleClick(e, '#services')}>
+                    <a href="/services">
                         Services
                     </a>
                 </li>
                 <li>
-                    <a href="#solutions" onClick={(e) => handleClick(e, '#solutions')}>
+                    <a href="/#solutions">
                         Solutions
                     </a>
                 </li>
                 <li>
-                    <a href="#contact" onClick={(e) => handleClick(e, '#contact')}>
+                    <a href="/products">
+                        Products
+                    </a>
+                </li>
+                <li>
+                    <a href="/expertise">
+                        Expertise
+                    </a>
+                </li>
+                <li>
+                    <a href="/#contact">
                         Contact
                     </a>
                 </li>

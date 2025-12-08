@@ -1,3 +1,6 @@
+'use client';
+
+import Link from 'next/link';
 import ScrollReveal from './ScrollReveal';
 import styles from '@/styles/Services.module.css';
 
@@ -42,6 +45,14 @@ export default function Services() {
                             <p>{service.description}</p>
                         </div>
                     ))}
+                </div>
+                <div className={styles.readMoreContainer}>
+                    <Link href="/services" className={styles.readMoreLink}>
+                        <button className={styles.readMoreButton}>
+                            View All Services
+                            <span className={styles.arrow}>→</span>
+                        </button>
+                    </Link>
                 </div>
             </section>
         </ScrollReveal>
