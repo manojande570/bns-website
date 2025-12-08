@@ -1,0 +1,90 @@
+.about {
+    padding: 5rem 10%;
+    background: #0f0f0f;
+    position: relative;
+    overflow: hidden;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(102, 126, 234, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    top: -200px;
+    right: -200px;
+    animation: pulse 8s ease-in-out infinite;
+}
+
+.about::after {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(118, 75, 162, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    bottom: -150px;
+    left: -150px;
+    animation: pulse 8s ease-in-out infinite 4s;
+}
+
+.aboutContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.aboutText {
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+.aboutText p {
+    animation: slideInFromLeft 0.8s ease forwards;
+    opacity: 0;
+}
+
+.aboutText p:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.aboutText p:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.aboutText p:nth-child(5) {
+    animation-delay: 0.6s;
+}
+
+.aboutImage {
+    position: relative;
+    animation: float 6s ease-in-out infinite;
+}
+
+.aboutImage::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 20px;
+    transform: rotate(-3deg);
+    z-index: -1;
+}
+
+.aboutImage svg {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+}
+
+@media (max-width: 768px) {
+    .aboutContent {
+        grid-template-columns: 1fr;
+    }
+}
