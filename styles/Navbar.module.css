@@ -5,7 +5,7 @@
     background: rgba(10, 10, 10, 0.95);
     backdrop-filter: blur(10px);
     z-index: 1000;
-    padding: 1.5rem 5%;
+    padding: 0.5rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,19 +14,37 @@
 }
 
 .nav.scrolled {
-    padding: 1rem 5%;
+    padding: 0.5rem 5%;
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
 }
 
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    animation: logoGlow 3s ease-in-out infinite;
+.logoLink {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
+
+.logo {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    filter: brightness(1);
+    transition: all 0.3s ease;
+}
+
+.logo:hover img {
+    filter: brightness(1.2) drop-shadow(0 0 10px rgba(102, 126, 234, 0.5));
+    transform: scale(1.05);
+}
+
 
 .navLinks {
     display: flex;

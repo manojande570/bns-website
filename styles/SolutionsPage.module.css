@@ -1,0 +1,406 @@
+.pageWrapper {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a2e 50%, #0f0f0f 100%);
+    position: relative;
+    overflow-x: hidden;
+}
+
+.pageWrapper::before {
+    content: '';
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    top: -200px;
+    right: -200px;
+    animation: pulse 8s ease-in-out infinite;
+}
+
+.pageWrapper::after {
+    content: '';
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(118, 75, 162, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    bottom: -150px;
+    left: -150px;
+    animation: pulse 8s ease-in-out infinite 4s;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.solutionsPage {
+    position: relative;
+    z-index: 1;
+    padding: 2rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+    animation: scaleIn 0.5s ease-out;
+}
+
+.content {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 4rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.subtitle {
+    color: #667eea;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.title {
+    font-size: 3.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0 0 1.5rem 0;
+    font-weight: 800;
+}
+
+.intro {
+    color: #ddd;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.solutionSection {
+    margin-bottom: 4rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.solutionSection:last-of-type {
+    border-bottom: none;
+}
+
+.solutionSection h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.solutionSection h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin: 2rem 0 1.5rem 0;
+}
+
+.solutionSection h4 {
+    font-size: 1.3rem;
+    color: #4facfe;
+    margin-bottom: 0.75rem;
+}
+
+.solutionSection p {
+    color: #ddd;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.highlight {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    padding: 1.5rem;
+    border-radius: 15px;
+    border-left: 4px solid #667eea;
+    margin: 2rem 0;
+}
+
+.conceptsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.conceptCard {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    transition: all 0.3s ease;
+}
+
+.conceptCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
+    border-color: rgba(102, 126, 234, 0.5);
+}
+
+.conceptCard h4 {
+    margin-top: 0;
+}
+
+.conceptCard p {
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+.docTypes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.docType {
+    background: linear-gradient(135deg, rgba(79, 172, 254, 0.1) 0%, rgba(0, 242, 254, 0.1) 100%);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid rgba(79, 172, 254, 0.2);
+    transition: all 0.3s ease;
+}
+
+.docType:hover {
+    transform: translateY(-3px);
+    border-color: rgba(79, 172, 254, 0.5);
+}
+
+.docType h4 {
+    margin-top: 0;
+    color: #00f2fe;
+}
+
+.docType p {
+    margin-bottom: 0;
+    font-size: 1rem;
+    color: #ccc;
+}
+
+.serviceList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.serviceItem {
+    background: rgba(102, 126, 234, 0.1);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    color: #ddd;
+    font-size: 1.05rem;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    transition: all 0.3s ease;
+}
+
+.serviceItem:hover {
+    background: rgba(102, 126, 234, 0.2);
+    transform: translateX(5px);
+    border-color: rgba(102, 126, 234, 0.4);
+}
+
+.expertiseList {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+}
+
+.expertiseList li {
+    color: #ddd;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.expertiseList li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #4facfe;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.benefitsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.benefit {
+    background: linear-gradient(135deg, rgba(79, 172, 254, 0.1) 0%, rgba(0, 242, 254, 0.1) 100%);
+    padding: 1.2rem;
+    border-radius: 10px;
+    color: #ddd;
+    font-size: 1.05rem;
+    border-left: 3px solid #4facfe;
+    transition: all 0.3s ease;
+}
+
+.benefit:hover {
+    transform: translateX(10px);
+    background: linear-gradient(135deg, rgba(79, 172, 254, 0.2) 0%, rgba(0, 242, 254, 0.2) 100%);
+}
+
+.consultingServices {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.consultingItem {
+    background: rgba(118, 75, 162, 0.1);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    color: #ddd;
+    font-size: 1.05rem;
+    border: 1px solid rgba(118, 75, 162, 0.3);
+    transition: all 0.3s ease;
+}
+
+.consultingItem:hover {
+    background: rgba(118, 75, 162, 0.2);
+    transform: translateX(5px);
+    border-color: rgba(118, 75, 162, 0.5);
+}
+
+.ctaSection {
+    text-align: center;
+    margin-top: 5rem;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+    border-radius: 20px;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+    animation: fadeInUp 0.6s ease-out 0.6s both;
+}
+
+.ctaSection h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.ctaSection p {
+    color: #ddd;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.ctaButton {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 1.2rem 3rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.5);
+}
+
+@media (max-width: 1024px) {
+    .content {
+        padding: 3rem 2rem;
+    }
+
+    .conceptsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .docTypes {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .content {
+        padding: 2rem 1.5rem;
+    }
+
+    .solutionSection h2 {
+        font-size: 2rem;
+    }
+
+    .solutionSection h3 {
+        font-size: 1.5rem;
+    }
+
+    .ctaSection {
+        padding: 3rem 1.5rem;
+    }
+
+    .ctaSection h2 {
+        font-size: 2rem;
+    }
+
+    .serviceList,
+    .benefitsGrid,
+    .consultingServices {
+        grid-template-columns: 1fr;
+    }
+}

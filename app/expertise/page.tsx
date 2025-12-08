@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import styles from '@/styles/ExpertisePage.module.css';
 
 export default function ExpertisePage() {
@@ -211,7 +210,6 @@ export default function ExpertisePage() {
                     </div>
                 </div>
             </div>
-            <Footer />
         </>
     );
 }

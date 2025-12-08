@@ -1,7 +1,6 @@
 'use client';
 
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import styles from '@/styles/AboutPage.module.css';
 
 export default function AboutPage() {
@@ -170,7 +169,6 @@ export default function AboutPage() {
                     </div>
                 </div>
             </div>
-            <Footer />
         </>
     );
 }

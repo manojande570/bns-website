@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import styles from '@/styles/ServicesPage.module.css';
 
 export default function ServicesPage() {
@@ -204,7 +203,6 @@ export default function ServicesPage() {
                     </div>
                 </div>
             </div>
-            <Footer />
         </>
     );
 }

@@ -54,14 +54,6 @@ export default function Solutions() {
                         </div>
                     ))}
                 </div>
-                <div className={styles.expertiseButtonContainer}>
-                    <Link href="/expertise" className={styles.expertiseLink}>
-                        <button className={styles.expertiseButton}>
-                            View Our Expertise
-                            <span className={styles.arrow}>→</span>
-                        </button>
-                    </Link>
-                </div>
             </section>
         </ScrollReveal>
     );

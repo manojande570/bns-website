@@ -1,7 +1,6 @@
 'use client';
 
 import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import styles from '@/styles/ProductsPage.module.css';
 
 export default function ProductsPage() {
@@ -162,7 +161,6 @@ export default function ProductsPage() {
                     </div>
                 </div>
             </div>
-            <Footer />
         </>
     );
 }

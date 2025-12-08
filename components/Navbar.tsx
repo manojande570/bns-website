@@ -28,7 +28,11 @@ export default function Navbar() {
 
     return (
         <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
-            <div className={styles.logo}>BNS International</div>
+            <a href="/" className={styles.logoLink}>
+                <div className={styles.logo}>
+                    <img src="https://www.bnsinc.us/assets/images/logo-white.png" alt="BNS International" />
+                </div>
+            </a>
             <ul className={styles.navLinks}>
                 <li>
                     <a href="/#home">
@@ -46,7 +50,7 @@ export default function Navbar() {
                     </a>
                 </li>
                 <li>
-                    <a href="/#solutions">
+                    <a href="/solutions">
                         Solutions
                     </a>
                 </li>
@@ -58,6 +62,11 @@ export default function Navbar() {
                 <li>
                     <a href="/expertise">
                         Expertise
+                    </a>
+                </li>
+                <li>
+                    <a href="/careers">
+                        Careers
                     </a>
                 </li>
                 <li>
