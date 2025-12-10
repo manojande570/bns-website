@@ -4,6 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
     title: "BNS International Inc - Inspired Performance",
     description: "Hire Better, Faster! Leading IT staffing and Software Development Company.",
+    viewport: "width=device-width, initial-scale=1",
     icons: {
         icon: "https://www.bnsinc.us/assets/images/logo-white.png",
         apple: "https://www.bnsinc.us/assets/images/logo-white.png",
@@ -40,6 +41,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
+            <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+            </head>
             <body>{children}</body>
         </html>
     );

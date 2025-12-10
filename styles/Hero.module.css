@@ -34,6 +34,9 @@
     text-align: center;
     z-index: 3;
     animation: fadeInUp 1s ease;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .heroContent h1 {
@@ -70,12 +73,87 @@
     box-shadow: 0 10px 30px rgba(255, 255, 255, 0.3);
 }
 
-@media (max-width: 768px) {
+/* Mobile-first responsive design */
+@media (max-width: 480px) {
+    .hero {
+        height: 100vh;
+        padding: 0 1rem;
+    }
+    
+    .heroContent {
+        padding: 0 1rem;
+    }
+    
+    .heroContent h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+    }
+
+    .heroContent p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .ctaButton {
+        padding: 0.8rem 2rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
     .heroContent h1 {
         font-size: 2.5rem;
     }
 
     .heroContent p {
         font-size: 1.2rem;
+    }
+    
+    .ctaButton {
+        padding: 0.9rem 2.5rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .heroContent h1 {
+        font-size: 3.5rem;
+    }
+
+    .heroContent p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    .heroContent h1 {
+        font-size: 4.5rem;
+    }
+
+    .heroContent p {
+        font-size: 1.5rem;
+    }
+}
+
+/* Landscape mobile orientation */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        height: 100vh;
+        padding: 2rem 0;
+    }
+    
+    .heroContent h1 {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .heroContent p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .ctaButton {
+        padding: 0.6rem 1.5rem;
+        font-size: 0.9rem;
     }
 }
