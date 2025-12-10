@@ -27,6 +27,12 @@ export default function About() {
                                 });
                             }, index * 600); // 600ms delay between each paragraph
                         }
+                    } else {
+                        // Reset animations when out of view
+                        const index = paragraphRefs.current.indexOf(entry.target as HTMLParagraphElement);
+                        if (index !== -1) {
+                            setVisibleParagraphs(prev => prev.filter(i => i !== index));
+                        }
                     }
                 });
             },
