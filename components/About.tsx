@@ -54,7 +54,7 @@ export default function About() {
                 <div className={styles.aboutContent}>
                     <div className={styles.aboutText}>
                         <p 
-                            ref={el => paragraphRefs.current[0] = el}
+                            ref={el => { paragraphRefs.current[0] = el; }}
                             className={`${styles.paragraph} ${styles.slideLeft} ${visibleParagraphs.includes(0) ? styles.visible : ''}`}
                         >
                             BNS International Inc is a leading IT staffing and Software Development Company
@@ -63,7 +63,7 @@ export default function About() {
                         </p>
                         <br />
                         <p 
-                            ref={el => paragraphRefs.current[1] = el}
+                            ref={el => { paragraphRefs.current[1] = el; }}
                             className={`${styles.paragraph} ${styles.slideRight} ${visibleParagraphs.includes(1) ? styles.visible : ''}`}
                         >
                             With a wide range of project execution models and costing models, our solutions are
@@ -73,7 +73,7 @@ export default function About() {
                         </p>
                         <br />
                         <p 
-                            ref={el => paragraphRefs.current[2] = el}
+                            ref={el => { paragraphRefs.current[2] = el; }}
                             className={`${styles.paragraph} ${styles.slideLeft} ${visibleParagraphs.includes(2) ? styles.visible : ''}`}
                         >
                             We focus exclusively on maximizing client returns from outsourcing and off-shoring.
